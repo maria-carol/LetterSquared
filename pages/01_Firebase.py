@@ -18,7 +18,15 @@ with st.form("formFirebase"):
     if btnSalvarFilme:
         if titulo and genero and diretor and rating:
             #Salvar no banco
-            novoFilme = dataBase.collection("filmes").document()
+            novoFilme = dataBase.collection("filmes").document(titulo)
+            novoFilme.set(
+                {
+                    "titulo": titulo,
+                    "genero": genero,
+                    "diretor": diretor,
+                    "rating": rating
+                }
+            )
             st.success("Filme adicionado!")
         else:
             st.error("Informe título, genero, diretor e avaliação!")
