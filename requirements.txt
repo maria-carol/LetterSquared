@@ -1,3 +1,4 @@
 streamlit
-streamlit-lottie
+streamlit-option-menu
 google-cloud-firestore
+google-auth

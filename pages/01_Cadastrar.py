@@ -1,5 +1,9 @@
 import streamlit as st
 from google.cloud import firestore
+from menu import render_sidebar_menu
+
+# Chama o menu marcando a opção ativa
+render_sidebar_menu(current_page_index=1)
 
 #Conectando a base de dados
 dataBase = firestore.Client.from_service_account_json("firebase.json")
