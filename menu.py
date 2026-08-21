@@ -25,7 +25,7 @@ def render_sidebar_menu(current_page_index=0):
 
     #Redireciona se o usuário clicar em uma página diferente da atual
     rotas = {
-        "Início": (0, "app.py"),
+        "Início": (0, "streamlit_app.py"),
         "Catálogo": (1, "pages/01_Cadastrar.py"),
         "Cadastrar": (2, "pages/02_Acervo.py"),
         "Reviews": (3, "pages/03_Sobre.py"),
